@@ -3,7 +3,7 @@
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.2.0 https://maven.apache.org/xsd/settings-1.2.0.xsd">
   <profiles>
     <profile>
-      <id>repository-sandbox</id>
+      <id>financial-sandbox</id>
       <repositories>
         <repository>
           <id>local-prewarmed</id>
@@ -19,9 +19,8 @@
       </repositories>
     </profile>
   </profiles>
+  
   <activeProfiles>
-    <activeProfile>
-      <id>repository-sandbox</id>
-    </activeProfile>
+    <activeProfile>financial-sandbox</activeProfile>
   </activeProfiles>
 </settings>
