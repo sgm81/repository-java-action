@@ -1,0 +1,7 @@
+name: 'Repository Java & AI Sandbox'
+description: 'Entorno confinado con .m2 corporativo para ejecución de agentes de codificación'
+author: 'AI Architecture'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
