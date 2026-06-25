@@ -17,6 +17,10 @@ echo "📦 Descomprimiendo catálogo de Jars internos..."
 # Esto creará la estructura '$TARGET_DIR/repository/com/banco/...'
 unzip -q /tmp/repository.zip -d "$TARGET_DIR/"
 
+echo "⚙️ Moviendo configuración settings.xml al volumen compartido..."
+# Copiamos el archivo de configuración al host para que Maven lo encuentre en el siguiente step
+cp /tmp/settings.xml "$TARGET_DIR/settings.xml"
+
 echo "========================================================="
 echo "✅ Dependencias listas en: $TARGET_DIR/repository"
 echo "========================================================="
