@@ -1,7 +1,8 @@
-FROM maven:3.9.6-eclipse-temurin-21
+# Pasamos de ~500MB a escasos 5MB con Alpine Linux
+FROM alpine:3.19
 
-# Instalar utilidad para descomprimir
-RUN apt-get update && apt-get install -y unzip && rm -rf /var/lib/apt/lists/*
+# Instalar 'unzip' y 'bash' (ya que entrypoint.sh usa #!/bin/bash)
+RUN apk add --no-cache unzip bash
 
 # 1. Copiamos el ZIP y el settings.xml a la ruta /tmp del contenedor
 COPY ./repository.zip /tmp/repository.zip
