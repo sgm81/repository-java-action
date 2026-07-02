@@ -21,7 +21,7 @@ mkdir -p "$TARGET_DIR"
 
 echo "📦 Descomprimiendo catálogo de Jars en el volumen del host..."
 if [ -f "$ORIGEN_ZIP" ]; then
-    unzip -o -q "$ORIGEN_ZIP" -d "$TARGET_DIR/"
+    unzip -o -q "$ORIGEN_ZIP" -d "$TARGET_DIR/" < /dev/null
 else
     echo "❌ ERROR CRÍTICO: No se encuentra el archivo $ORIGEN_ZIP"
     exit 1
